@@ -477,8 +477,8 @@ __global__ void render_pose_coco_parts(float* dst_pointer, int w_canvas, int h_c
    255,     0,    85};
   const int nColor = sizeof(color)/(3*sizeof(int));
   //float offset = ratio_to_origin * 0.5 - 0.5;
-  float radius = 2*h_canvas / 200.0f;
-  float stickwidth = h_canvas / 120.0f;
+  float radius = 1.4 * 2*h_canvas / 200.0f;
+  float stickwidth = 1.4 * h_canvas / 120.0f;
 
   if(x < w_canvas && y < h_canvas){
   //if(x == 0 && y == 0){

@@ -1,0 +1,15 @@
+deploy:
+  image:
+    name: riseml/caffe-prereqs
+    install:
+    - bash ./install_caffe_and_cpm.sh
+  run:
+    - ./build/examples/rtpose/rtpose_demo_server.bin --logtostderr=1 --port $PORT
+  gpu: yes
+  input: 
+    image: image/jpeg
+  output: 
+    image: image/jpeg
+  demo:
+    title: Realtime Pose Estimation Demo
+description: Demo for the implementation of 'Realtime Multi-Person 2D Pose Estimation using Part Affinity Fields' by Zhe Cao et al., 2016

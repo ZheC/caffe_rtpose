@@ -396,6 +396,7 @@ else
 		endif
 	endif
 endif
+LIBRARIES += mimetic
 INCLUDE_DIRS += $(BLAS_INCLUDE)
 LIBRARY_DIRS += $(BLAS_LIB)
 
