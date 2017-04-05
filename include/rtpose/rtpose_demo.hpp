@@ -71,8 +71,8 @@ private:
 	std::string PERSON_DETECTOR_CAFFEMODEL = "model/coco/pose_iter_440000.caffemodel"; //person detector
 	std::string PERSON_DETECTOR_PROTO = "model/coco/pose_deploy_linevec.prototxt"; //person detector
 	// Global parameters
-	int MAX_RESOLUTION_WIDTH = 2000;
-	int MAX_RESOLUTION_HEIGHT = 4000;
+	int MAX_RESOLUTION_WIDTH = 1280;
+	int MAX_RESOLUTION_HEIGHT = 720;
 	int NET_RESOLUTION_WIDTH = 496;
 	int NET_RESOLUTION_HEIGHT = 368;
 	int BATCH_SIZE = 1;      // "Number of scales to average"

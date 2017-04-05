@@ -679,9 +679,14 @@ std::vector<unsigned char> RTPose::run(std::vector<unsigned char> input, param_m
             part_to_show_param = part_to_show;
         }
     }
-    if (image_width * image_height > MAX_RESOLUTION_WIDTH * MAX_RESOLUTION_HEIGHT) {
+    if (image_width > MAX_RESOLUTION_WIDTH || image_height > MAX_RESOLUTION_HEIGHT) {
         LOG(INFO) << "Image too large: " << image_width << "x" << image_height << ". Ignoring.";
-        return input;
+        std::vector<unsigned char> result;
+        cv::putText(cvImageIn, 
+            "Input image larger than " + std::to_string(MAX_RESOLUTION_WIDTH) + "x" + std::to_string(MAX_RESOLUTION_HEIGHT),
+             cv::Point(100, image_height/2), cv::FONT_HERSHEY_PLAIN, 3, cv::Scalar(147, 20, 255), 2 ,8);
+        imencode(".jpg", cvImageIn, result);
+        return result;
     }
 
     // this is unnecessary copying of frames...
