@@ -15,4 +15,4 @@ deploy:
     description: Demo for the implementation of 'Realtime Multi-Person 2D Pose Estimation using Part Affinity Fields', Zhe Cao et al., 2016
     readme:
       content: |
-      Details on the implementation can be found in the [GitHub repository](https://github.com/CMU-Perceptual-Computing-Lab/caffe_rtpose)
+        Details on the implementation can be found in the [GitHub repository](https://github.com/CMU-Perceptual-Computing-Lab/caffe_rtpose)
